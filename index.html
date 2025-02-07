@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoeb Alam's Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="menu-icon" onclick="toggleMenu()">☰</div>
+            <ul id="nav-links">
+                <li><a href="#home" onclick="toggleMenu()">Home</a></li>
+                <li><a href="#work" onclick="toggleMenu()">Recent Works</a></li>
+                <li><a href="#info" onclick="toggleMenu()">My Info</a></li>
+                <li><a href="#services" onclick="toggleMenu()">Services</a></li>
+                <li><a href="#contact" onclick="toggleMenu()">Contact Me</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="home" class="home-section">
+        <div class="home-content">
+            <h1>Shoeb Alam</h1>
+            <h3>Coder & Developer</h3>
+            <p>Passionate about creating innovative solutions and beautiful designs.</p>
+            <a href="#contact" class="cta-button">Hire Me</a>
+        </div>
+        <div class="home-image">
+            <img src="/alam2.png" alt="Shoeb Alam">
+        </div>
+    </section>
+    
+    <section id="work" class="work-section">
+        <h2>Recent Works</h2>
+        <div class="gallery">
+            <div class="project">
+                <a href="https://alamfoodservices.netlify.app/"><img src="https://i.postimg.cc/d3tL2Kdr/project-1.png" alt="project 1"></a>
+            </div>
+            <div class="project">
+                <a href="https://alam-jarvis.netlify.app/"><img src="https://i.postimg.cc/ZYV9TCtc/project-2.png" alt="project 2"></a>
+            </div>
+            <div class="project">
+                <a href="https://shoebalam440.github.io/KBC/"><img src="kbc.png" alt="project 3"></a>
+            </div>
+            <div class="project">
+                <a href="https://shoebalam440.github.io/USD-converter/"><img src="usd.png" alt="project 4"></a>
+            </div>
+            <div class="project">
+                <a href="https://shoebalam440.github.io/Restaurant/"><img src="resto.png" alt="project 4"></a>
+            </div>
+        </div>
+    </section>
+    
+    <section id="info" class="info-section">
+        <div class="info-left">
+            <img src="/shoeb2.png" alt="Shoeb Alam">
+        </div>
+        <div class="info-right">
+            <h2>About Me</h2>
+            <p>
+                I am a dedicated Computer Science and Engineering student with a passion for technology and creativity. I specialize in Python, Web Development, and App Development, and I love turning ideas into reality through code.
+            </p>
+            <a href="/Resume.pdf" class="cv-button">Download CV</a>
+            <h3 class="info__title">Skills</h3>
+            <div class="skills__content grid">
+                <div class="skills__box">
+                    <img src="/png-clipart-c-logo-c-programming-language-icon-letter-c-blue-logo-thumbnail-removebg-preview.png" alt="C" class="skills__img">
+                    <span class="skills__name">C</span>
+                </div>
+                <div class="skills__box">
+                    <img src="/python.png" alt="Python" class="skills__img">
+                    <span class="skills__name">Python</span>
+                </div>
+                <div class="skills__box">
+                    <img src="/download.png" alt="MySQL" class="skills__img">
+                    <span class="skills__name">MySQL</span>
+                </div>
+                <div class="skills__box">
+                    <img src="/git.png" alt="Git" class="skills__img">
+                    <span class="skills__name">Git</span>
+                </div>
+                <div class="skills__box">
+                    <img src="/github.png" alt="GitHub" class="skills__img">
+                    <span class="skills__name">GitHub</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="services" class="services-section">
+        <h2>Services</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <i class="fas fa-code"></i>
+                <h3>Python Development</h3>
+                <p>Building scalable and efficient Python applications.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-laptop-code"></i>
+                <h3>Web Development</h3>
+                <p>Creating responsive and user-friendly websites.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-mobile-alt"></i>
+                <h3>App Development</h3>
+                <p>Developing cross-platform mobile applications.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section id="contact" class="contact-section">
+        <h2>Contact Me</h2>
+        <form name='submit-to-google-sheet'action="send-message.php" method="post">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required></textarea>
+            
+            <button type="submit" class="send-button">Send Message</button>
+        </form>
+    </section>
+    
+    <footer>
+        <p>&copy; 2024 Shoeb Alam. All rights reserved.</p>
+        <div class="social-links">
+            <a href="https://github.com/shoebalam440"><i class="fab fa-github"></i></a>
+            <a href="https://instagram.com/shoeb4lam"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/shoeb-alam-6079b0257?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fab fa-linkedin"></i></a>
+        </div>
+    </footer>
+    
+    <script>
+        function toggleMenu() {
+            var navLinks = document.getElementById('nav-links');
+            navLinks.classList.toggle('active');
+        }
+    </script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbz_ie87nxscsHVEQFZaBKKtA-VGK9_vUAuaaLzRZUc-2ZHEp3L9BNNa750JaR8_Ir0KSQ/exec'
+        const form = document.forms['submit-to-google-sheet']
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => console.log('Success!', response))
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+</body>
+</html>

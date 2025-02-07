@@ -1,0 +1,350 @@
+/* Base styles (for all screen sizes) */
+body {
+    font-family: 'Syne', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: white;
+    background-color: rgb(10, 10, 28); /* Dark background color */
+}
+
+header {
+    background-color: rgb(12, 12, 53);
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Base styles for navigation */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: rgb(12, 12, 53);
+}
+
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav li {
+    margin: 0 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #00bcd4;
+}
+
+/* Styles for mobile menu */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+
+    #nav-links {
+        display: none;
+        position: fixed;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: rgb(12, 12, 53);
+        text-align: center;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #nav-links.active {
+        display: flex;
+    }
+
+    #nav-links li {
+        margin: 20px 0;
+    }
+}
+
+.home-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: url('/bg4.jpg') no-repeat center center;
+    background-size: cover;
+    padding: 100px 50px;
+    color: rgb(254, 247, 247);
+    background-color: rgb(10, 10, 28); /* Dark background color */
+}
+
+.home-content {
+    max-width: 50%;
+}
+
+.home-content h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.home-content h3 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.home-content p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    background-color: #00bcd4;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #0097a7;
+}
+
+.home-image img {
+    max-width: 100%;
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(0, 188, 212, 0.5);
+}
+
+.work-section {
+    background-color: rgb(31, 31, 67);
+    padding: 50px;
+    background: url('/bg3.webp') no-repeat center center;
+    background-size: cover;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.project {
+    margin: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.project:hover {
+    transform: scale(1.05);
+}
+
+.project img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.info-section {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgb(25, 25, 66);
+    padding: 50px;
+    background: url('/bg6.webp') no-repeat center center;
+    background-size: cover;
+}
+
+.info-left img {
+    max-width: 100%;
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(0, 188, 212, 0.5);
+}
+
+.info-right {
+    margin-left: 20px;
+    flex: 1;
+}
+
+.cv-button {
+    background-color: #00bcd4;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.cv-button:hover {
+    background-color: #0097a7;
+}
+
+.skills__content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.skills__box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease;
+    padding: 1rem;
+}
+
+.skills__box:hover {
+    transform: translateY(-10px);
+}
+
+.skills__img {
+    width: 50px;
+    margin-bottom: 10px;
+}
+
+.services-section {
+    background-color: rgb(14, 14, 37);
+    padding: 50px;
+    text-align: center;
+    background: url('/bg3.webp') no-repeat center center;
+    background-size: cover;
+}
+
+.services-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.service-card {
+    background-color: rgb(25, 25, 66);
+    padding: 20px;
+    border-radius: 10px;
+    width: 30%;
+    margin: 10px;
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+    transform: scale(1.05);
+}
+
+.service-card i {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #00bcd4;
+}
+
+.contact-section {
+    background-color: rgb(12, 12, 53);
+    padding: 50px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+label {
+    margin: 10px 0 5px;
+}
+
+input, textarea {
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid #00bcd4;
+    background-color: transparent;
+    color: white;
+}
+
+textarea {
+    height: 100px;
+}
+
+.send-button {
+    background-color: #00bcd4;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.send-button:hover {
+    background-color: #0097a7;
+}
+
+footer {
+    background-color: rgb(12, 12, 53);
+    padding: 20px;
+    text-align: center;
+}
+
+.social-links a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #00bcd4;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    .home-section {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .home-content, .home-image {
+        width: 100%;
+        max-width: none;
+        margin-bottom: 20px;
+    }
+
+    .info-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .info-left img {
+        max-width: 50%;
+    }
+
+    .info-right {
+        margin-left: 0;
+    }
+
+    .service-card {
+        width: 100%;
+    }
+}
